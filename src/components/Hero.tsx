@@ -1,6 +1,6 @@
 
-
 import { ArrowDown } from 'lucide-react';
+import profpic from '../assets/images/profpic.jpg';
 
 export default function Hero() {
   return (
@@ -11,15 +11,28 @@ export default function Hero() {
       </div>
       
       <div className="container mx-auto px-6 relative">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Paridhi <span className="text-purple-500">Rathod</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            An aspiring software developer with proven skills in JavaScript and MERN Stack. Always eager to
-            learn new methodologies and solve challenging problems. Finished several web development projects
-            and continuously learning new technologies.
-          </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Paridhi <span className="text-purple-500">Rathod</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                An aspiring software developer with proven skills in JavaScript and MERN Stack. Always eager to
+                learn new methodologies and solve challenging problems. Finished several web development projects
+                and continuously learning new technologies.
+              </p>
+            </div>
+            <div className="flex justify-center md:justify-center">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500/30 shadow-lg shadow-purple-500/20">
+                <img
+                  src={profpic}
+                  alt="Paridhi Rathod"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -32,3 +45,6 @@ export default function Hero() {
     </section>
   );
 }
+
+
+

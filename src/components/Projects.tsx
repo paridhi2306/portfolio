@@ -1,4 +1,4 @@
-import { Github, ExternalLink } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
@@ -25,6 +25,14 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
       github: 'https://github.com/paridhi2306/email_writer_assistant',
       
+    },
+    {
+      title: 'Healthcare Appointment Management System',
+      description: 'Full-stack healthcare platform for booking appointments and real-time patient-doctor communication. Features JWT authentication with role-based access control and Socket.io chat functionality.',
+      tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Socket.io'],
+      image: 'https://plus.unsplash.com/premium_photo-1664298484957-0105d6f398cf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZG9jdG9yJTIwYXBwb2ludG1lbnR8ZW58MHx8MHx8fDA%3D',
+      github: 'https://github.com/paridhi2306/HealthCare_Appointment_System.git',
+      
     }
   ];
 
@@ -35,7 +43,7 @@ export default function Projects() {
         
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <div key={index} className="group relative bg-black rounded-xl overflow-hidden shadow-2xl shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300">
+            <div key={index} className="group relative bg-black rounded-xl overflow-hidden shadow-2xl shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 h-[550px]">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black z-10"></div>
               <img 
                 src={project.image} 
@@ -43,37 +51,38 @@ export default function Projects() {
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
               />
               
-              <div className="absolute inset-0 z-20 p-8 flex flex-col justify-end">
-                <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 text-base mb-6 line-clamp-3 group-hover:line-clamp-none transition-all">
-                  {project.description}
-                </p>
+              <div className="absolute inset-0 z-20 p-8 flex flex-col justify-between">
+                <div></div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-300 text-base mb-6 line-clamp-3 group-hover:line-clamp-none transition-all">
+                    {project.description}
+                  </p>
                 
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, i) => (
-                    <span 
-                      key={i} 
-                      className="text-sm px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full
-                               hover:bg-purple-500/30 transition-colors">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech.map((tech, i) => (
+                      <span 
+                        key={i} 
+                        className="text-sm px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full
+                                 hover:bg-purple-500/30 transition-colors">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
 
-                <div className="flex gap-6">
-                  <a 
-                    href={project.github} 
-                    className="text-white hover:text-purple-500 transition-colors flex items-center gap-2"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <Github size={22} />
-                    <span className="text-sm">View Code</span>
-                  </a>
-                  
-                    
+                  <div className="flex gap-6">
+                    <a 
+                      href={project.github} 
+                      className="text-white hover:text-purple-500 transition-colors flex items-center gap-2"
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <Github size={22} />
+                      <span className="text-sm">View Code</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
