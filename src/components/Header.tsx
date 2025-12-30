@@ -35,7 +35,7 @@ export default function Header() {
                className="text-gray-300 hover:text-purple-500 transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://shorturl.at/fHXsT" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/paridhi-rathod-2a616923b" target="_blank" rel="noopener noreferrer"
                className="text-gray-300 hover:text-purple-500 transition-colors">
               <Linkedin size={20} />
             </a>
@@ -72,7 +72,7 @@ export default function Header() {
                  className="text-gray-300 hover:text-purple-500 transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://shorturl.at/fHXsT" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/paridhi-rathod-2a616923b" target="_blank" rel="noopener noreferrer"
                  className="text-gray-300 hover:text-purple-500 transition-colors">
                 <Linkedin size={20} />
               </a>
